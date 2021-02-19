@@ -1,4 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Tony Poplo"
+copyright = "Mine"
 theme = "ananke"
