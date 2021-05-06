@@ -1,6 +1,8 @@
+@import "color";
 body {
     margin: 0;
-    background-color: tomato;
+    background-color: $light-color;
+    color: $dark-color;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ul {
@@ -9,18 +11,23 @@ ul {
 }
 #nav {
     height: 1rem;
-    padding: .4rem 0 .6rem 1rem;
-    background-color: aqua;
-    color: #3f3535;
+    padding: 0.4rem 0 0.6rem 1rem;
+    background-color: $dark-color;
+    color: $light-accent-color;
     list-style: none;
-    li {
-        display: inline;
-    }
-    a {
-        text-decoration: none;
-        color: #000000;
-    }
-    a:hover {
-        text-decoration: underline;
+    ul {
+        float: right;
+        background-color: $secondary-color;
+        li {
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            color: $light-color;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: $light-accent-color;
+        }
     }
 }
