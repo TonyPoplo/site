@@ -1,0 +1,4 @@
+{{ $banner_image := or (.Param "banner_image") "/banner/DSC_0156.jpg" }}
+{{ $banner_position := or (.Param "banner_position") "center center" }}
+<img src='{{  $banner_image  | absURL }}' alt="{{ .Title }}" class="banner" 
+style="object-position: {{ $banner_position }};">
