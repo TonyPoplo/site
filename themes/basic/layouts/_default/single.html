@@ -8,6 +8,17 @@
         {{- block "main" . }}
             {{ .Title }}
             {{ .Content }}
+
+
+            {{ with .Resources.ByType "image" }}
+                {{ range . }}
+
+                    {{ $image := .Resize "600x q90" }}
+                    <img src="{{ $image.RelPermalink }}">
+                    <p>{{ with $image.Exif }}Date: {{ .Date }}{{ end }}</p>
+                {{ end }}
+            {{ end }}
+
         {{- end }}
         </div>
         {{- partial "footer.html" . -}}
