@@ -1,7 +1,0 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "Tony Poplo"
-copyright = "Mine"
-theme = "basic"
-[markup.goldmark.renderer]
-unsafe= true

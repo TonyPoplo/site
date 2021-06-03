@@ -1,0 +1,22 @@
+baseURL: https://tonypoplo.com/
+languageCode: en-us
+title: Tony Poplo
+theme: basic
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 2
+    - name: Photos  
+      url: /photos
+      weight: 3
+    - name: Info  
+      url: /info
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+

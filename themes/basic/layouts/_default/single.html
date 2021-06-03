@@ -9,13 +9,15 @@
             {{ .Title }}
             {{ .Content }}
 
+            {{ $is_gallery := .Param "gallery"}}
+            {{ if $is_gallery}}
+                {{ with .Resources.ByType "image" }}
+                    {{ range . }}
 
-            {{ with .Resources.ByType "image" }}
-                {{ range . }}
-
-                    {{ $image := .Resize "600x q90" }}
-                    <img src="{{ $image.RelPermalink }}">
-                    <p>{{ with $image.Exif }}Date: {{ .Date }}{{ end }}</p>
+                        {{ $image := .Resize "600x q90" }}
+                        <img src="{{ $image.RelPermalink }}">
+                        <p>{{ with $image.Exif }}Date: {{ .Date }}{{ end }}</p>
+                    {{ end }}
                 {{ end }}
             {{ end }}
 

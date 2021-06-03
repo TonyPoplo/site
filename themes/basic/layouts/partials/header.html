@@ -1,7 +1,7 @@
-<div id="nav">Tony Poplo
+<div id="nav"> {{ .Site.Title }}
 <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/gallery/">Gallery</a></li>
-    <li><a href="/info/">Info</a></li>
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
 </ul>
 </div>
