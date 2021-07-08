@@ -1,4 +1,10 @@
 {{ define "main"}}
-<h1> {{ .Title }} </h1>
-{{ .Content }}
+    <h1> {{ .Title }} </h1>
+    
+    {{ .Content }}
+    {{ range first 3 .Site.RegularPages }}
+        <a href="{{ .Permalink }}"><h1>{{ .Title }}</h1></a>
+        <time datetime='{{ .Date.Format "2006-01-02"}}'>{{ .Date.Format "Jan 2, 2006"}}</time>
+        <p>{{ .Summary }}</p>
+    {{ end }}
 {{ end }}
