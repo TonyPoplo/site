@@ -1,0 +1,13 @@
+{{ define "main"}}
+    <h1>{{ .Title }}</h1>
+    
+    {{ .Content }}
+    {{ range .Pages }}
+        {{ $cover := (print "**/" (.Param "cover"))}}
+        <p>{{ $cover }}</p>
+        {{ $coverRsc := .Resources.GetMatch ($cover)}}
+        <p> {{ $coverRsc }}</p>
+        <img src="{{ $coverRsc.RelPermalink }}">
+    {{ end }}
+    
+{{ end }}
