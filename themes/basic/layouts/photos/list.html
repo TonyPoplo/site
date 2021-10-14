@@ -3,11 +3,16 @@
     
     {{ .Content }}
     {{ range .Pages }}
-        {{ $cover := (print "**/" (.Param "cover"))}}
-        <p>{{ $cover }}</p>
-        {{ $coverRsc := .Resources.GetMatch ($cover)}}
-        <p> {{ $coverRsc }}</p>
-        <img src="{{ $coverRsc.RelPermalink }}">
+        <div class="cover">
+            <h1>{{ .Title }}</h1>
+            {{ $coverRsc := .Resources.GetMatch (print "**/" (.Param "cover"))}}
+            <a href="{{ .Permalink }}">
+                {{ with $coverRsc }}
+                    {{ $image := .Resize "600x q90" }}
+                    <img src="{{ $image.RelPermalink }}">
+                {{ end }}
+            </a>
+        </div>
     {{ end }}
     
 {{ end }}

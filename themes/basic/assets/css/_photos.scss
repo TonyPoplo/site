@@ -1,0 +1,16 @@
+.cover{
+    max-width: 40%;
+    padding: 2rem;
+    float: left;
+    a {
+        img{
+            width: 100%;
+            filter: grayscale(100%);
+        } 
+    }
+    a:hover {
+        img {
+            filter: none;
+        }
+    }
+}
