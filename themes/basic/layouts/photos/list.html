@@ -1,18 +1,20 @@
 {{ define "main"}}
     <h1>{{ .Title }}</h1>
-    
     {{ .Content }}
     {{ range .Pages }}
-        <div class="cover">
-            <h1>{{ .Title }}</h1>
-            {{ $coverRsc := .Resources.GetMatch (print "**/" (.Param "cover"))}}
-            <a href="{{ .Permalink }}">
-                {{ with $coverRsc }}
-                    {{ $image := .Resize "600x q90" }}
-                    <img src="{{ $image.RelPermalink }}">
-                {{ end }}
-            </a>
-        </div>
+        {{ $coverRsc := .Resources.GetMatch (print "**/" (.Param "cover"))}}
+        {{ $galleryLink := .Permalink }}
+        {{ $galleryTitle := .Title }}
+        {{ with $coverRsc }}
+            {{ $image := .Resize "600x q90" }}
+            <div class="gallery__link">
+                <a href="{{ $galleryLink }}">
+                    <div class="cover">
+                        <img src="{{ $image.RelPermalink }}" alt="{{ $galleryTitle }}">
+                        <div class="gallery__title">{{ $galleryTitle }}</div>
+                    </div>
+                </a>
+            </div>
+        {{ end }}
     {{ end }}
-    
 {{ end }}
