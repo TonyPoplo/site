@@ -1,16 +1,27 @@
-.cover{
+.gallery__link {
     max-width: 40%;
-    padding: 2rem;
     float: left;
     a {
-        img{
-            width: 100%;
-            filter: grayscale(100%);
-        } 
-    }
-    a:hover {
-        img {
-            filter: none;
+        filter: grayscale(100%);
+        .cover {
+            padding: 2rem;
+            // see: https://www.w3schools.com/howto/howto_css_image_text.asp
+            .gallery__title{
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+            }
+            // a {
+            //     img{
+            //         width: 100%;
+            //         filter: grayscale(100%);
+            //     }
+            // }
+            // a:hover {
+            //     img {
+            //         filter: none;
+            //     }
+            // }
         }
     }
 }
