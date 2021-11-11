@@ -9,12 +9,13 @@
             {{ with $coverRsc }}
                 {{ $image := .Resize "600x q90" }}
                 <a href="{{ $galleryLink }}">
-                <div>
-                    <div class="cover-art">
-                        <img src="{{ $image.RelPermalink }}" alt="{{ $galleryTitle }}" style="width:100%">
-                        <div class="cover-title">{{ $galleryTitle }}</div>
+                    <div>
+                        <div class="cover-art">
+                            <img src="{{ $image.RelPermalink }}" alt="{{ $galleryTitle }}" style="width:100%">
+                            <div class="cover-title">{{ $galleryTitle }}</div>
+                        </div>
                     </div>
-                </div></a>
+                </a>
             {{ end }}
         {{ end }}
     </div>

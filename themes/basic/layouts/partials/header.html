@@ -1,7 +1,10 @@
-<div id="nav"> <a href="/">{{ .Site.Title }}</a>
-<ul>
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-    {{ end }}
-</ul>
+<div id="nav">
+    <div class="site-title">
+        <a href="/">{{ .Site.Title }}</a>
+    </div>
+    <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
 </div>
