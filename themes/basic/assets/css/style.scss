@@ -1,47 +1,14 @@
 @import "color";
+@import "nav";
 @import "photos";
+
 body {
     margin: 0;
     background-color: $light-color;
     color: $dark-color;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-ul {
-    margin: 0;
-    padding: 0;
-}
-#nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // height: 1rem;
-    // padding: 0.4rem 0 0.6rem 1rem;
-    // background-color: $dark-color;
-    color: $light-accent-color;
-    // list-style: none;
-    .site-title {
-        a {
-            padding-left: 2rem;
-        }
-    }
-    ul {
-        float: right;
-        margin-right: 2rem;
-        background-color: $secondary-color;
-        li {
-            display: inline;
-        }
-        a {
-            text-decoration: none;
-            color: $light-color;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: $light-accent-color;
-        }
-    }
-}
+
 
 #content {
     max-width: 800px;
